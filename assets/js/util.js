@@ -433,12 +433,12 @@
 		// Events.
 			$this
 				.on('submit', function() {
-
 					$this.find('input[type=text],input[type=password],textarea')
 						.each(function(event) {
+							//submit data to email
 
 							var i = $(this);
-
+							
 							if (i.attr('name').match(/-polyfill-field$/))
 								i.attr('name', '');
 
@@ -446,6 +446,7 @@
 
 								i.removeClass('polyfill-placeholder');
 								i.val('');
+								
 
 							}
 
